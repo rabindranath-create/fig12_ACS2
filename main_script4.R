@@ -31,7 +31,7 @@ lambda <- 2
 
 results_300 <- data.frame(
   Run = integer(),
-  N_o = integer(),
+  N_c = integer(),
   Length = numeric(),
   Cost = numeric(),
   NumDisambigs = integer()
@@ -45,7 +45,7 @@ for (i in 1:100) {
   
   results_300[i, ] <- list(
     Run = i,
-    N_o = 300,
+    N_c = 300,
     Length = result$Length_total,
     Cost = result$Cost_total,
     NumDisambigs = length(result$Disambiguate_state)
@@ -60,7 +60,7 @@ saveRDS(results_300, file.path(output_dir, "data_50_4_7.rds"))
 
 results_325 <- data.frame(
   Run = integer(),
-  N_o = integer(),
+  N_c = integer(),
   Length = numeric(),
   Cost = numeric(),
   NumDisambigs = integer()
@@ -74,7 +74,7 @@ for (i in 1:100) {
   
   results_325[i, ] <- list(
     Run = i,
-    N_o = 325,
+    N_c = 325,
     Length = result$Length_total,
     Cost = result$Cost_total,
     NumDisambigs = length(result$Disambiguate_state)
